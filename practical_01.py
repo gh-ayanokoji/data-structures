@@ -51,4 +51,4 @@ def fNCnotBad(football, cricket, badminton):
 print(f"Roll no. of students that play both cricket and badminton are: {cricNBad(cricket, badminton)}")
 print(f"Roll no. of students that play either cricket and badminton but not both are: {notBothCnb(cricket, badminton)}")
 print(f"Roll no. of students that play neither cricket nor badminton are: {neitherCNB(football, cricket, badminton)}")
-print(f"Roll no. of students that play both cricket and football but no badminton are: {fNCnotBad(football, cricket, badminton)}")
+print(f"Roll no. of students that play both cricket and football but not badminton are: {fNCnotBad(football, cricket, badminton)}")
