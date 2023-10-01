@@ -2,7 +2,7 @@ cricket = set()
 badminton = set()
 football = set()
 
-cric_st = int(input('enter the no. of students playing cricket: '))
+cric_st = int(input("enter the no. of students playing cricket: "))
 for i in range(cric_st):
     roll = int(input("Enter the roll no. of student: "))
     if roll not in cricket:
@@ -10,7 +10,7 @@ for i in range(cric_st):
     else:
         pass
 
-bad_st = int(input('enter the no. of students playing badminton: '))
+bad_st = int(input("enter the no. of students playing badminton: "))
 for i in range(bad_st):
     roll = int(input("Enter the roll no. of student: "))
     if roll not in badminton:
@@ -18,7 +18,7 @@ for i in range(bad_st):
     else:
         pass
 
-foot_st = int(input('enter the no. of students playing football: '))
+foot_st = int(input("enter the no. of students playing football: "))
 for i in range(foot_st):
     roll = int(input("Enter the roll no. of student: "))
     if roll not in football:
@@ -26,24 +26,36 @@ for i in range(foot_st):
     else:
         pass
 
+
 def cricNBad(cricket, badminton):
     cnb = cricket.intersection(badminton)
     return cnb
+
 
 def notBothCnb(cricket, badminton):
     ncnb = cricket.symmetric_difference(badminton)
     return ncnb
 
+
 def neitherCNB(football, cricket, badminton):
     fnc = (cricket.union(badminton)).symmetric_difference(football)
     return fnc
+
 
 def fNCnotBad(football, cricket, badminton):
     fnc = (football.intersection(cricket)).symmetric_difference(badminton)
     return fnc
 
-print(f"Roll no. of students that play both cricket and badminton are: {cricNBad(cricket, badminton)}")
-print(f"Roll no. of students that play either cricket and badminton but not both are: {notBothCnb(cricket, badminton)}")
-print(f"Roll no. of students that play neither cricket nor badminton are: {neitherCNB(football, cricket, badminton)}")
-print(f"Roll no. of students that play both cricket and football but no badminton are: {fNCnotBad(football, cricket, badminton)}")
 
+print(
+    f"Roll no. of students that play both cricket and badminton are: {cricNBad(cricket, badminton)}"
+)
+print(
+    f"Roll no. of students that play either cricket and badminton but not both are: {notBothCnb(cricket, badminton)}"
+)
+print(
+    f"Roll no. of students that play neither cricket nor badminton are: {neitherCNB(football, cricket, badminton)}"
+)
+print(
+    f"Roll no. of students that play both cricket and football but no badminton are: {fNCnotBad(football, cricket, badminton)}"
+)
