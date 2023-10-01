@@ -38,24 +38,17 @@ def notBothCnb(cricket, badminton):
 
 
 def neitherCNB(football, cricket, badminton):
-    fnc = (cricket.union(badminton)).symmetric_difference(football)
-    return fnc
+    f1= football.difference(cricket)
+    f2 = football.difference(badminton)
+    return f1.intersection(f2)
 
 
 def fNCnotBad(football, cricket, badminton):
-    fnc = (football.intersection(cricket)).symmetric_difference(badminton)
-    return fnc
+    fnc = football.union(cricket)
+    return fnc.difference(badminton)
 
 
-print(
-    f"Roll no. of students that play both cricket and badminton are: {cricNBad(cricket, badminton)}"
-)
-print(
-    f"Roll no. of students that play either cricket and badminton but not both are: {notBothCnb(cricket, badminton)}"
-)
-print(
-    f"Roll no. of students that play neither cricket nor badminton are: {neitherCNB(football, cricket, badminton)}"
-)
-print(
-    f"Roll no. of students that play both cricket and football but no badminton are: {fNCnotBad(football, cricket, badminton)}"
-)
+print(f"Roll no. of students that play both cricket and badminton are: {cricNBad(cricket, badminton)}")
+print(f"Roll no. of students that play either cricket and badminton but not both are: {notBothCnb(cricket, badminton)}")
+print(f"Roll no. of students that play neither cricket nor badminton are: {neitherCNB(football, cricket, badminton)}")
+print(f"Roll no. of students that play both cricket and football but no badminton are: {fNCnotBad(football, cricket, badminton)}")
