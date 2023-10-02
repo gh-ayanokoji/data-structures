@@ -29,26 +29,26 @@ for i in range(foot_st):
 
 def cricNBad(cricket, badminton):
     cnb = cricket.intersection(badminton)
-    return cnb
+    return list(cnb)
 
 
 def notBothCnb(cricket, badminton):
     ncnb = cricket.symmetric_difference(badminton)
-    return ncnb
+    return list(ncnb)
 
 
 def neitherCNB(football, cricket, badminton):
     f1= football.difference(cricket)
     f2 = football.difference(badminton)
-    return f1.intersection(f2)
+    return len(f1.intersection(f2))
 
 
 def fNCnotBad(football, cricket, badminton):
     fnc = football.union(cricket)
-    return fnc.difference(badminton)
+    return len(fnc.difference(badminton))
 
 
 print(f"Roll no. of students that play both cricket and badminton are: {cricNBad(cricket, badminton)}")
 print(f"Roll no. of students that play either cricket and badminton but not both are: {notBothCnb(cricket, badminton)}")
-print(f"Roll no. of students that play neither cricket nor badminton are: {neitherCNB(football, cricket, badminton)}")
-print(f"Roll no. of students that play both cricket and football but not badminton are: {fNCnotBad(football, cricket, badminton)}")
+print(f"{neitherCNB(football, cricket, badminton)} students play neither cricket nor badminton")
+print(f"{fNCnotBad(football, cricket, badminton)} students play both cricket and football but not badminton are: ")
