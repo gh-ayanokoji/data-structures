@@ -1,39 +1,54 @@
 total = int(input("Enter the no. of books: "))
 books = []
+
 for i in range(total):
+    title = input("Enter the name of book: ")
     cost = int(input("Enter the cost of book: "))
-    books.append(cost)
+    temp = [title, cost]
+    books.append(temp)
 
 def delDup(books):
     noDup = []
-    for item in books:
-        if item not in noDup:
-            noDup.append(item)
-    return noDup
+    for book in books:
+        if book not in noDup:
+            noDup.append(book)
+    print("\nBooks without duplicate entries are:\n")
+    for book in noDup:
+        print(f"Title: {book[0]}, Cost: {book[1]}")
 
 def ascending(books):
-    books.sort()
-    return books
-
-    
+    cost = []
+    asc = []
+    for i in range(len(books)):
+        cost.append(books[i][1])
+    cost.sort()
+    for i in range(len(cost)):
+        for book in books:
+            if cost[i] == book[1]:
+                if book not in asc:
+                    asc.append(book)
+    print("\nBooks in ascending order are:\n")
+    for book in asc:
+        print(f"Title: {book[0]}, Cost: {book[1]}")
+         
 def costly(books):
     count = 0
-    for item in books:
-        if item > 500:
+    for book in books:
+        if book[1] > 500:
             count+=1
-
     return count
 
 def lessCost(books):
     newList = []
-    for item in books:
-        if item < 500:
-            newList.append(item)
+    for book in books:
+        if book[1] < 500:
+            newList.append(book)
+    print("\nBooks costing less than 500 are:\n")
+    for book in newList:
+        print(f"Title: {book[0]}, Cost: {book[1]}")
 
-    return newList
-
-print(f"Books without duplicate entries is {delDup(books)}")
-print(f"Books in ascending order is {ascending(books)}")
-print(f"{costly(books)} no. of books cost more than 500")
-print(f"Books costing less than 500 are {lessCost(books)}")
+delDup(books)
+ascending(books)
+print(f"\n{costly(books)} books cost more than 500")
+lessCost(books)
 
