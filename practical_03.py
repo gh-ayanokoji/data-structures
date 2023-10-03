@@ -4,8 +4,6 @@ for i in range(total):
     cost = int(input("Enter the cost of book: "))
     books.append(cost)
 
-print(books)
-
 def delDup(books):
     noDup = []
     for item in books:
