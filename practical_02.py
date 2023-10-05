@@ -1,7 +1,7 @@
 total = int(input("Enter total no. of students: "))
 students = []
 for i in range(total):
-    marks = int(input("Enter the marks of student: "))
+    marks = int(input(f"Enter the marks of student {i+1}: "))
     students.append(marks)
 
 
@@ -33,5 +33,5 @@ def maxFreq(students):
 
 print(f"Average marks of class is {average(students)}")
 highLow(students)
-print(f"No. of students who were absent are {absent(students)}")
+print(f"{absent(students)}students were absent")
 maxFreq(students)
