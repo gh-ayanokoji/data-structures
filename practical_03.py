@@ -49,7 +49,6 @@ def lessCost(books):
         print(f"Title: {book[0]}, Cost: {book[1]}")
 
 books = delDup(books)
-delDup(books)
 ascending(books)
 print(f"\n{costly(books)} books cost more than 500")
 lessCost(books)
