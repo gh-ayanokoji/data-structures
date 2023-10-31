@@ -24,7 +24,10 @@ def bub_sort(percent):
         if swap == 0:
             break
     print(percent)
+    print("Top Five Scores:")
+    for i in range(5):
+        print(f"{i+1}. {percent[i]}")
 
     
-arr = [23.4,45.6,11.09,53.9]
+arr = [23.4,45.6,11.09,53.9,9.3]
 bub_sort(arr)
