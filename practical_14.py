@@ -1,4 +1,4 @@
-def sel_sort(percent):
+def selection_sort(percent):
     for i in range(len(percent)):
         min = i
         
@@ -12,7 +12,7 @@ def sel_sort(percent):
 
     print(percent)
 
-def bub_sort(percent):
+def bubble_sort(percent):
     for i in range(len(percent)):
         swap = 0
         for j in range(len(percent)-i-1):
@@ -30,5 +30,5 @@ def bub_sort(percent):
 
     
 arr = [23.4,45.6,11.09,53.9,9.3]
-sel_sort(arr)
-bub_sort(arr)
+selection_sort(arr)
+bubble_sort(arr)
