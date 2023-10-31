@@ -30,4 +30,5 @@ def bub_sort(percent):
 
     
 arr = [23.4,45.6,11.09,53.9,9.3]
+sel_sort(arr)
 bub_sort(arr)
