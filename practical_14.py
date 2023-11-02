@@ -1,4 +1,4 @@
-def selection_sort(percent):
+def selectionSort(percent):
     for i in range(len(percent)):
         min = i
         
@@ -12,7 +12,7 @@ def selection_sort(percent):
 
     print(percent)
 
-def bubble_sort(percent):
+def bubbleSort(percent):
     for i in range(len(percent)):
         swap = 0
         for j in range(len(percent)-i-1):
@@ -29,6 +29,8 @@ def bubble_sort(percent):
         print(f"{i+1}. {percent[i]}")
 
     
-arr = [23.4,45.6,11.09,53.9,9.3]
-selection_sort(arr)
-bubble_sort(arr)
+arr = [23.4, 45.6, 11.09, 53.9, 9.3, 99.9, 1.0]
+print("Using Selection Sort:")
+selectionSort(arr)
+print("Using Bubble Sort:")
+bubbleSort(arr)
